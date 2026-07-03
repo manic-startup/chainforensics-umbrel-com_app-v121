@@ -1,8 +1,8 @@
-manifestVersion: 1
+manifestVersion: 2
 id: chainforensics
 category: bitcoin
 name: ChainForensics
-version: "1.2.0"
+version: "1.2.1"
 tagline: Privacy-focused Bitcoin blockchain analysis & UTXO privacy scoring
 port: 3010
 description: >-
