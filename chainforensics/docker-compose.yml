@@ -3,7 +3,7 @@ version: "3.7"
 services:
   app_proxy:
     environment:
-      APP_HOST: chainforensics_web_1
+      APP_HOST: chainforensics_test_web_1
       APP_PORT: 80
 
   web:
@@ -17,7 +17,7 @@ services:
       - api
     networks:
       default:
-        ipv4_address: $APP_CHAINFORENSICS_APP_WEB_IP
+        ipv4_address: $APP_CHAINFORENSICS_TEST_APP_WEB_IP
 
   api:
     build:
@@ -43,4 +43,4 @@ services:
       - ${APP_DATA_DIR}/data:/app/data
     networks:
       default:
-        ipv4_address: $APP_CHAINFORENSICS_APP_API_IP
+        ipv4_address: $APP_CHAINFORENSICS_TEST_APP_API_IP
