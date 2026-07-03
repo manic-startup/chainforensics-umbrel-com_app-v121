@@ -1,4 +1,4 @@
-# ChainForensics for Umbrel
+# ChainForensics for Umbrel "My Community Store Version"
 
 **Privacy-focused Bitcoin blockchain analysis that runs entirely on your own node.**
 
