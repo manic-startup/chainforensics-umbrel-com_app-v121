@@ -50,16 +50,52 @@ export function copyToClipboard(text, buttonId) {
 /**
  * Copy donation address with visual feedback
  */
-export function copyAddress() {
-    navigator.clipboard.writeText(DONATION_ADDRESS).then(function() {
-        const btn = document.getElementById('copy-btn');
+export async function copyAddress() {
+    const btn = document.getElementById('copy-btn');
+    if (!btn) return;
+
+    const originalText = '📋 Copy Address';
+
+    try {
+        if (navigator.clipboard && window.isSecureContext) {
+            await navigator.clipboard.writeText(DONATION_ADDRESS);
+        } else {
+            const textArea = document.createElement('textarea');
+            textArea.value = DONATION_ADDRESS;
+            textArea.setAttribute('readonly', '');
+            textArea.style.position = 'fixed';
+            textArea.style.left = '-9999px';
+            textArea.style.top = '0';
+            textArea.style.opacity = '0';
+
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+
+            const successful = document.execCommand('copy');
+            document.body.removeChild(textArea);
+
+            if (!successful) {
+                throw new Error('Fallback copy failed');
+            }
+        }
+
         btn.classList.add('copied');
         btn.innerHTML = '✓ Copied!';
+
         setTimeout(function() {
             btn.classList.remove('copied');
-            btn.innerHTML = '📋 Copy Address';
+            btn.innerHTML = originalText;
         }, 2000);
-    });
+    } catch (err) {
+        console.error('Copy failed:', err);
+        btn.classList.remove('copied');
+        btn.innerHTML = 'Copy failed';
+
+        setTimeout(function() {
+            btn.innerHTML = originalText;
+        }, 2000);
+    }
 }
 
 /**
