@@ -38,11 +38,11 @@ website: https://github.com/manic-startup/chainforensics-umbrel-com_app-v121
 submitter: ChainForensics
 repo: https://github.com/manic-startup/chainforensics-umbrel-com_app-v121
 support: https://github.com/manic-startup/chainforensics-umbrel-com_app-v121
-icon: https://raw.githubusercontent.com/manic-startup/chainforensics-umbrel-com_app-v121/main/chainforensics/icon.svg
+icon: https://raw.githubusercontent.com/manic-startup/chainforensics-umbrel-com_app-v121/main/chainforensics_test/icon.svg
 gallery:
-  - https://raw.githubusercontent.com/manic-startup/chainforensics-umbrel-com_app-v121/main/chainforensics/CF1.jpg
-  - https://raw.githubusercontent.com/manic-startup/chainforensics-umbrel-com_app-v121/main/chainforensics/CF2.jpg
-  - https://raw.githubusercontent.com/manic-startup/chainforensics-umbrel-com_app-v121/main/chainforensics/CF3.jpg
+  - https://raw.githubusercontent.com/manic-startup/chainforensics-umbrel-com_app-v121/main/chainforensics_test/CF1.jpg
+  - https://raw.githubusercontent.com/manic-startup/chainforensics-umbrel-com_app-v121/main/chainforensics_test/CF2.jpg
+  - https://raw.githubusercontent.com/manic-startup/chainforensics-umbrel-com_app-v121/main/chainforensics_test/CF3.jpg
 dependencies:
   - bitcoin
   - fulcrum
