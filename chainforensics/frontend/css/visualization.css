@@ -1,5 +1,5 @@
-/* ChainForensics Visualization Styles */
-/* Fullscreen visualization modal and graph controls */
+/* ChainForensics — Visualization Styles */
+/* Fullscreen visualization modal, graph controls, legend, and node details */
 
 .vis-modal {
     display: none;
@@ -8,7 +8,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(4, 6, 12, 0.95);
     z-index: 2000;
 }
 
@@ -21,34 +21,40 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 24px;
+    padding: 12px 20px;
     background: var(--bg-secondary);
     border-bottom: 1px solid var(--border-color);
 }
 
 .vis-modal-title {
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 600;
     color: var(--text-primary);
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
+}
+
+.vis-modal-title svg {
+    color: var(--accent-amber);
 }
 
 .vis-modal-close {
     background: var(--bg-tertiary);
     border: 1px solid var(--border-color);
     color: var(--text-primary);
-    padding: 8px 16px;
-    border-radius: 6px;
+    padding: 7px 14px;
+    border-radius: var(--radius-sm);
     cursor: pointer;
-    font-size: 0.875rem;
-    transition: all 0.2s;
+    font-size: 0.8rem;
+    font-family: var(--font-display);
+    transition: all 0.15s ease;
 }
 
 .vis-modal-close:hover {
     background: var(--accent-red);
     border-color: var(--accent-red);
+    color: white;
 }
 
 .vis-modal-body {
@@ -63,145 +69,63 @@
 }
 
 .vis-sidebar {
-    width: 320px;
+    width: 300px;
     background: var(--bg-secondary);
     border-left: 1px solid var(--border-color);
-    padding: 20px;
+    padding: 18px;
     overflow-y: auto;
 }
 
-/* Legend */
-.vis-legend {
-    margin-bottom: 24px;
-}
+/* ── Controls ─────────────────────────────────────── */
 
-.vis-legend-title {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    color: var(--text-secondary);
-    margin-bottom: 12px;
-    letter-spacing: 1px;
-    font-weight: 600;
-}
-
-.vis-legend-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 8px;
-    font-size: 0.875rem;
-}
-
-.vis-legend-color {
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-}
-
-.vis-legend-color.spent {
-    background: linear-gradient(135deg, #6e7681, #484f58);
-}
-
-.vis-legend-color.unspent {
-    background: linear-gradient(135deg, #238636, #2ea043);
-}
-
-.vis-legend-color.coinbase {
-    background: linear-gradient(135deg, #d29922, #f0b429);
-}
-
-.vis-legend-color.coinjoin {
-    background: linear-gradient(135deg, #a371f7, #8957e5);
-}
-
-.vis-legend-color.start {
-    background: linear-gradient(135deg, #58a6ff, #388bfd);
-    border: 2px solid #58a6ff;
-}
-
-/* Node details panel */
-.vis-node-details {
-    background: var(--bg-tertiary);
-    border-radius: 8px;
-    padding: 16px;
-    border: 1px solid var(--border-color);
-}
-
-.vis-node-details-title {
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: var(--accent-blue);
-    margin-bottom: 12px;
-}
-
-.vis-node-detail-row {
-    display: flex;
-    justify-content: space-between;
-    padding: 8px 0;
-    border-bottom: 1px solid var(--border-color);
-    font-size: 0.8rem;
-}
-
-.vis-node-detail-row:last-child {
-    border-bottom: none;
-}
-
-.vis-node-detail-label {
-    color: var(--text-secondary);
-}
-
-.vis-node-detail-value {
-    color: var(--text-primary);
-    font-family: 'SF Mono', Monaco, monospace;
-    word-break: break-all;
-    max-width: 180px;
-    text-align: right;
-}
-
-/* Controls */
 .vis-controls {
     display: flex;
-    gap: 8px;
+    gap: 6px;
 }
 
 .vis-control-btn {
     background: var(--bg-tertiary);
     border: 1px solid var(--border-color);
     color: var(--text-primary);
-    padding: 8px 12px;
-    border-radius: 6px;
+    padding: 7px 12px;
+    border-radius: var(--radius-sm);
     cursor: pointer;
-    font-size: 0.75rem;
-    transition: all 0.2s;
+    font-size: 0.72rem;
+    font-family: var(--font-display);
+    transition: all 0.15s ease;
+    letter-spacing: 0.02em;
 }
 
 .vis-control-btn:hover {
-    background: var(--accent-blue);
-    border-color: var(--accent-blue);
+    background: var(--accent-amber);
+    border-color: var(--accent-amber);
+    color: #0a0e15;
 }
 
-/* Stats */
+/* ── Stats ────────────────────────────────────────── */
+
 .vis-stats {
     background: var(--bg-tertiary);
-    border-radius: 8px;
-    padding: 16px;
+    border-radius: var(--radius-md);
+    padding: 14px;
     border: 1px solid var(--border-color);
-    margin-bottom: 24px;
+    margin-bottom: 20px;
 }
 
-.vis-stats-title {
-    font-size: 0.75rem;
+.vis-stats-title,
+.vis-legend-title {
+    font-size: 0.68rem;
     text-transform: uppercase;
-    color: var(--text-secondary);
+    color: var(--text-dim);
     margin-bottom: 12px;
-    letter-spacing: 1px;
+    letter-spacing: 0.08em;
     font-weight: 600;
 }
 
 .vis-stats-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 12px;
+    gap: 10px;
 }
 
 .vis-stat {
@@ -209,12 +133,98 @@
 }
 
 .vis-stat-value {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--accent-blue);
+    font-family: var(--font-mono);
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--accent-amber);
 }
 
 .vis-stat-label {
-    font-size: 0.7rem;
+    font-size: 0.65rem;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+/* ── Legend ────────────────────────────────────────── */
+
+.vis-legend {
+    margin-bottom: 20px;
+}
+
+.vis-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 7px;
+    font-size: 0.82rem;
     color: var(--text-secondary);
+}
+
+.vis-legend-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+.vis-legend-color.spent {
+    background: var(--text-dim);
+}
+
+.vis-legend-color.unspent {
+    background: var(--accent-green);
+}
+
+.vis-legend-color.coinbase {
+    background: var(--accent-amber);
+}
+
+.vis-legend-color.coinjoin {
+    background: var(--accent-purple);
+}
+
+.vis-legend-color.start {
+    background: var(--accent-blue);
+    box-shadow: 0 0 0 2px var(--bg-secondary), 0 0 0 3px var(--accent-blue-bright);
+}
+
+/* ── Node Details Panel ───────────────────────────── */
+
+.vis-node-details {
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-md);
+    padding: 14px;
+    border: 1px solid var(--border-color);
+}
+
+.vis-node-details-title {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--accent-amber);
+    margin-bottom: 10px;
+}
+
+.vis-node-detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 7px 0;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.78rem;
+}
+
+.vis-node-detail-row:last-child {
+    border-bottom: none;
+}
+
+.vis-node-detail-label {
+    color: var(--text-dim);
+}
+
+.vis-node-detail-value {
+    color: var(--text-primary);
+    font-family: var(--font-mono);
+    word-break: break-all;
+    max-width: 170px;
+    text-align: right;
 }

@@ -28,7 +28,7 @@ export function hideLoading() {
  */
 export function showError(msg) {
     document.getElementById('results-container').innerHTML =
-        '<div class="card"><div class="card-body"><p style="color: var(--accent-red); text-align: center; padding: 40px;">❌ Error: ' + msg + '</p></div></div>';
+        '<div class="card"><div class="card-body"><p style="color: var(--accent-red); text-align: center; padding: 40px;">Error: ' + msg + '</p></div></div>';
 }
 
 /**
