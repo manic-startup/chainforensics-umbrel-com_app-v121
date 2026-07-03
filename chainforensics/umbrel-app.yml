@@ -34,15 +34,15 @@ description: >-
   All analysis runs locally on your Bitcoin node and Fulcrum server.
   Your addresses and queries never leave your network.
 developer: ChainForensics
-website: https://github.com/manic-startup/chainforensics-umbrel
+website: https://github.com/manic-startup/chainforensics-umbrel-com_app-v121
 submitter: ChainForensics
-repo: https://github.com/manic-startup/chainforensics-umbrel
-support: https://github.com/manic-startup/chainforensics-umbrel
-icon: https://raw.githubusercontent.com/manic-startup/chainforensics-umbrel/main/chainforensics/icon.svg
+repo: https://github.com/manic-startup/chainforensics-umbrel-com_app-v121
+support: https://github.com/manic-startup/chainforensics-umbrel-com_app-v121
+icon: https://raw.githubusercontent.com/manic-startup/chainforensics-umbrel-com_app-v121/main/chainforensics/icon.svg
 gallery:
-  - https://raw.githubusercontent.com/manic-startup/chainforensics-umbrel/main/chainforensics/CF1.jpg
-  - https://raw.githubusercontent.com/manic-startup/chainforensics-umbrel/main/chainforensics/CF2.jpg
-  - https://raw.githubusercontent.com/manic-startup/chainforensics-umbrel/main/chainforensics/CF3.jpg
+  - https://raw.githubusercontent.com/manic-startup/chainforensics-umbrel-com_app-v121/main/chainforensics/CF1.jpg
+  - https://raw.githubusercontent.com/manic-startup/chainforensics-umbrel-com_app-v121/main/chainforensics/CF2.jpg
+  - https://raw.githubusercontent.com/manic-startup/chainforensics-umbrel-com_app-v121/main/chainforensics/CF3.jpg
 dependencies:
   - bitcoin
   - fulcrum
