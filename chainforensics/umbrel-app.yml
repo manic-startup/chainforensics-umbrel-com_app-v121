@@ -47,7 +47,7 @@ dependencies:
   - bitcoin
   - fulcrum
 releaseNotes: >-
-  Version 1.2.0 brings major new privacy analysis features:
+  Version 1.2.1 brings major new privacy analysis features:
 
   • Enhanced cluster detection with multiple heuristics
 
